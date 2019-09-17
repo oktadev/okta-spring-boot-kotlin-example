@@ -2,6 +2,8 @@
 
 This example shows how to use Okta's Authentication API with Spring Boot, Kotlin as the main language.
 
+Please read [Build an Application with Spring Boot and Kotlin](http://developer.okta.com/blog/2019/09/17/build-a-spring-boot-kotlin-app) to see how this app was created.
+
 **Prerequisites:** [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 > [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure. Okta's intuitive API and expert support make it easy for developers to authenticate, manage and secure users and roles in any application.
@@ -16,7 +18,7 @@ This example shows how to use Okta's Authentication API with Spring Boot, Kotlin
 To install this example application, run the following commands:
 
 ```bash
-git clone https://github.com/oktadeveloper/spring-kotlin.git
+git clone https://github.com/oktadeveloper/okta-spring-boot-kotlin-example.git
 ```
 
 This will get a copy of the project locally. 
@@ -27,10 +29,21 @@ To build the project, run the following command inside the project's folder:
 ./gradlew build
 ```
 
+### Create an OIDC App in Okta
 
-### Create a Free Okta Developer Account
+You will need to create an OIDC App in Okta to get a `clientId` and `clientSecret`. 
 
-If you don't have one, [create an Okta Developer account](https://developer.okta.com/signup/). After you've completed the setup process, log in to your account and navigate to copy the `Org URL` in from the top right corner of the page, it will look something like: `https://dev-123456.okta.com`.
+Log in to your Okta Developer account (or [sign up](https://developer.okta.com/signup/) if you don’t have an account) and navigate to **Applications** > **Add Application**. Click **Web**, click **Next**, and give the app a name you’ll remember. Click **Done** and copy the `clientId` into `server/src/main/resources/application.yml`. 
+
+```yaml
+okta:  
+  oauth2:  
+    issuer: https://{yourOktaDomain}/oauth2/default  
+    client-id: {yourClientID}
+    client-secret: {yourClientSecret}
+```
+
+**NOTE:** The value of `{yourOktaDomain}` should be something like `dev-123456.okta.com`. Make sure you don't include `-admin` in the value!
 
 ### Start the application
 
@@ -44,7 +57,7 @@ To start the application you can just run:
 
 This example uses the following libraries provided by Okta:
 
-* [Okta Authentication SDK](https://github.com/okta/okta-auth-java)
+This example uses the [Okta Spring Boot Starter](https://github.com/okta/okta-spring-boot) to integrate with Okta.
 
 ## Help
 
