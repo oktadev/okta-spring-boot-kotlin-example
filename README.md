@@ -4,7 +4,7 @@ This example shows how to use Okta's Authentication API with Spring Boot, Kotlin
 
 Please read [Build an Application with Spring Boot and Kotlin](http://developer.okta.com/blog/2019/09/17/build-a-spring-boot-kotlin-app) to see how this app was created.
 
-**Prerequisites:** [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+**Prerequisites:** [Java 11](https://adoptopenjdk.net)
 
 > [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure. Okta's intuitive API and expert support make it easy for developers to authenticate, manage and secure users and roles in any application.
 
@@ -61,7 +61,7 @@ This example uses the [Okta Spring Boot Starter](https://github.com/okta/okta-sp
 
 ## Help
 
-Please post any questions as comments on the following blog posts, or visit our [Okta Developer Forums](https://devforum.okta.com/). You can also email developers@okta.com if would like to create a support ticket.
+Please post any questions as comments on the following blog posts, or visit our [Okta Developer Forums](https://devforum.okta.com/).
 
 ## License
 
