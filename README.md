@@ -55,8 +55,6 @@ To start the application you can just run:
 
 ## Links
 
-This example uses the following libraries provided by Okta:
-
 This example uses the [Okta Spring Boot Starter](https://github.com/okta/okta-spring-boot) to integrate with Okta.
 
 ## Help
