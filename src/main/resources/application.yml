@@ -1,0 +1,6 @@
+okta:  
+  oauth2:  
+    issuer: https://dev-06325070.okta.com/oauth2/default  
+    client-id: 0oa7dj6qdnxtmCn625d7
+    client-secret: 5sNn0NQejGDjs48TYuZH1Vc-bBLAXIU9jB4A9pmb
+
